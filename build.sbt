@@ -1,4 +1,4 @@
-name := "project-3"
+name := "learn-scala"
 
 version := "0.1"
 

@@ -1,7 +1,7 @@
-Scala structure project
+Scala  project structure
 ![img.png](img.png)
 
-###Installation :
+#Installation :
 - https://www.scala-lang.org/download/install.html
 
 ![img_1.png](img_1.png)

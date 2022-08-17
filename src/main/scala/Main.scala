@@ -1,3 +1,16 @@
+import function.DefaultValueParameter
+import function.CallByName
+import function.NestedFunction
+import function.FunctionWithNamedArg
+import function.PartiallyAppliedFunction
+import function.AnonymousFunction
+import function.CurryingFunction
+import function.HigerOrderGenericFunction
+import function.ClosureFunction
+import collection.ArrayData
+import collection.ListData
+import collection.MapData
+
 object Main {
   def main(args: Array[String]) = {
     println(msg)
@@ -5,18 +18,24 @@ object Main {
     var name = "Othniel Muno"
     println(s"The oldest of all is ${ages.max}")
     println(s"His name is ${name}")
-    delayed(time())
+    /* Start Logic*/
+    CallByName.delayed(CallByName.time())
+    DefaultValueParameter.sum()
+    NestedFunction.factorialPrint()
+    FunctionWithNamedArg.printInt(b = 10, a = 5)
+    PartiallyAppliedFunction.printData()
+    AnonymousFunction.anonymousFunction()
+    CurryingFunction.callCurryingFunction()
+    HigerOrderGenericFunction.callHigerOrderGenericFunction()
+    ClosureFunction.callClosureFunction()
+
+    //Array and Collection
+    ArrayData.callArrayData()
+    ListData.listNew()
+    MapData.calMap()
   }
 
-  def time() = {
-    println("Getting time in nano seconds")
-    System.nanoTime
-  }
 
-  def delayed( t: => Long ) = {
-    println("In delayed method")
-    println("Param: " + t)
-  }
 }
 
 def msg = "I was compiled by Scala 3. :)"
